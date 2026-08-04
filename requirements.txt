@@ -1,0 +1,6 @@
+faker
+duckdb
+pandas
+pyyaml
+streamlit
+pytest

@@ -1,0 +1,118 @@
+domains:
+  hr:
+    legacy_table: legacy_hr
+    target_table: target_hr
+    mappings:
+      - legacy_column: employee_id
+        target_column: employee_id
+        target_type: VARCHAR
+      - legacy_column: name
+        target_column: full_name
+        target_type: VARCHAR
+      - legacy_column: dept_code
+        target_column: dept_code
+        target_type: VARCHAR
+      - legacy_column: job_title
+        target_column: job_title
+        target_type: VARCHAR
+      - legacy_column: hire_date
+        target_column: hire_date
+        target_type: DATE
+      - legacy_column: termination_date
+        target_column: termination_date
+        target_type: DATE
+      # employment_status intentionally dropped
+      - legacy_column: cost_centre
+        target_column: cost_centre
+        target_type: VARCHAR
+      - legacy_column: manager_id
+        target_column: manager_id
+        target_type: VARCHAR
+
+  finance:
+    legacy_table: legacy_finance
+    target_table: target_finance
+    mappings:
+      - legacy_column: gl_entry_id
+        target_column: gl_entry_id
+        target_type: VARCHAR
+      - legacy_column: cost_centre
+        target_column: cost_centre
+        target_type: VARCHAR
+      - legacy_column: account_code
+        target_column: account_code
+        target_type: BIGINT
+      - legacy_column: amount
+        target_column: amount
+        target_type: DOUBLE
+      - legacy_column: currency
+        target_column: currency
+        target_type: VARCHAR
+      - legacy_column: posting_date
+        target_column: posting_date
+        target_type: DATE
+      - legacy_column: document_type
+        target_column: document_type
+        target_type: VARCHAR
+      - legacy_column: vendor_id
+        target_column: vendor_id
+        target_type: VARCHAR
+
+  procurement:
+    legacy_table: legacy_procurement
+    target_table: target_procurement
+    mappings:
+      - legacy_column: po_id
+        target_column: po_id
+        target_type: VARCHAR
+      - legacy_column: vendor_id
+        target_column: vendor_id
+        target_type: VARCHAR
+      # vendor_name intentionally dropped
+      - legacy_column: material_code
+        target_column: material_code
+        target_type: VARCHAR
+      - legacy_column: quantity
+        target_column: quantity
+        target_type: BIGINT
+      - legacy_column: unit_price
+        target_column: unit_price
+        target_type: DOUBLE
+      - legacy_column: po_date
+        target_column: po_date
+        target_type: DATE
+      - legacy_column: delivery_status
+        target_column: delivery_status
+        target_type: VARCHAR
+      - legacy_column: cost_centre
+        target_column: cost_centre
+        target_type: VARCHAR
+
+  expenses:
+    legacy_table: legacy_expenses
+    target_table: target_expenses
+    mappings:
+      - legacy_column: expense_id
+        target_column: expense_id
+        target_type: VARCHAR
+      - legacy_column: employee_id
+        target_column: employee_id
+        target_type: VARCHAR
+      - legacy_column: cost_centre
+        target_column: cost_centre
+        target_type: VARCHAR
+      - legacy_column: category
+        target_column: category
+        target_type: VARCHAR
+      - legacy_column: amount
+        target_column: amount
+        target_type: DOUBLE
+      - legacy_column: submitted_date
+        target_column: submitted_date
+        target_type: DATE
+      - legacy_column: approval_status
+        target_column: approval_status
+        target_type: VARCHAR
+      - legacy_column: currency
+        target_column: currency
+        target_type: VARCHAR

@@ -7,7 +7,7 @@ Rather than a simple "copy data from A to B" exercise, this platform simulates t
 ## 🏗️ Architecture
 
 ```mermaid
-graph TD
+flowchart TD
     A[Synthetic Legacy Data & Issues] --> B[Discovery Profiler]
     B --> C[Issue Tracker / Log]
     C --> D[Mapping Validator & Cleansing]
@@ -15,19 +15,19 @@ graph TD
     E --> F[Downstream Reporting Impact]
     F --> G[Stakeholder Streamlit Dashboard]
     
-    subgraph Core Engine
-    B
-    C
-    D
-    E
-    F
+    subgraph CoreEngine [Core Engine]
+        B
+        C
+        D
+        E
+        F
     end
     
-    subgraph Data Layer
-    DB[(erp.duckdb)]
-    Core Engine <--> DB
+    subgraph DataLayer [Data Layer]
+        DB[(erp.duckdb)]
     end
     
+    CoreEngine <--> DB
     G -.-> DB
 ```
 

@@ -24,4 +24,3 @@ docs/problem_statements/*.md
 .vscode/
 .idea/
 .DS_Store
-.gemini/
